@@ -1,0 +1,40 @@
+1 Q.Show first name, last name, and gender of patients whose gender is 'M' ?
+A.
+SELECT first_name, last_name,gender
+FROM patients 
+WHERE gender is 'M';
+
+
+2 Q. Show first name and last name of patients who does not have allergies. (null)?
+A.
+SELECT first_name,last_name 
+FROM patients 
+WHERE allergies is null;
+
+
+3 Q.Show first name of patients that start with the letter 'C'?
+A.
+SELECT first_name 
+FROM patients 
+WHERE first_name like 'c%';
+
+
+4 Q.Show first name and last name of patients that weight within the range of 100 to 120 (inclusive)?
+A.
+SELECT first_name,last_name 
+FROM patients
+WHERE weight between 100 and 120;
+
+
+5 Q.Update the patients table for the allergies column. If the patient's allergies is null then replace it with 'NKA'?
+A.
+UPDATE patients
+SET allergies = 'NKA'
+WHERE allergies is null;
+
+
+6 Q.Show first name and last name concatinated into one column to show their full name.?
+A.
+select
+concat (first_name, " ", last_name) as full_name
+from patients;
