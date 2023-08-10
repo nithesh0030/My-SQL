@@ -36,5 +36,52 @@ WHERE allergies is null;
 6 Q.Show first name and last name concatinated into one column to show their full name.?
 A.
 select
-concat (first_name, " ", last_name) as full_name
+concat (first_name, " ", last_name) AS full_name
 from patients;
+
+
+7 Q.Show first name, last name, and the full province name of each patient.?   Example: 'Ontario' instead of 'ON'
+A.
+SELECT first_name,last_name,province_name
+FROM patients
+JOIN province_names ON province_names.province_id = patients.province_id;
+
+
+8 Q. Show how many patients have a birth_date with 2010 as the birth year.?
+A.
+SELECT COUNT(*) AS total_patients
+FROM patients
+WHERE YEAR (birth_date) = 2010;
+
+
+9 Q. Show the first_name, last_name, and height of the patient with the greatest height.?
+A.
+SELECT first_name,last_name,
+MAX (height) AS height
+FROM patients;
+
+
+10 Q. Show all columns for patients who have one of the following patient_ids: 1,45,534,879,1000.?
+A.
+SELECT * FROM patients
+WHERE patient_id IN (1, 45, 534, 879, 1000);
+
+
+11 Q. Show the total number of admissions.?
+A.
+SELECT COUNT(*) AS total_admissions
+from admissions;
+
+
+12 Q. Show the patient id and the total number of admissions for patient_id 579.?
+A.
+SELECT patient_id, 
+COUNT(*) AS total_admissions 
+FROM admissions
+WHERE patient_id = 579;
+
+
+13 Q. Show all the columns from admissions where the patient was admitted and discharged on the same day.?
+A.
+SELECT * FROM admissions
+WHERE admission_date = discharge_date;
