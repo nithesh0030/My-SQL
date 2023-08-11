@@ -85,3 +85,39 @@ WHERE patient_id = 579;
 A.
 SELECT * FROM admissions
 WHERE admission_date = discharge_date;
+
+
+14 Q. Based on the cities that our patients live in, show unique cities that are in province_id 'NS'?
+A.
+SELECT DISTINCT(city) AS unique_cities
+FROM patients
+WHERE province_id = 'NS';
+
+
+15 Q. Write a query to find the first_name, last name and birth date of patients who has height greater than 160 and weight greater than 70.?
+A.
+SELECT first_name, last_name, birth_date FROM patients
+WHERE height > 160 AND weight > 70;
+
+
+16 Q. Write a query to find list of patients first_name, last_name, and allergies from Hamilton where allergies are not null.?
+A.
+SELECT first_name,last_name,allergies
+FROM patients
+WHERE
+  city = 'Hamilton'
+  and allergies is not null;
+
+
+17 Q. Based on cities where our patient lives in, write a query to display the list of unique city starting 
+      with a vowel (a, e, i, o, u). Show the result order in ascending by city.?
+A.
+select distinct city
+from patients
+where
+  city like 'a%'
+  or city like 'e%'
+  or city like 'i%'
+  or city like 'o%'
+  or city like 'u%'
+order by city;
