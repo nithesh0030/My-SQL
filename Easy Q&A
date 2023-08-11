@@ -121,3 +121,4 @@ where
   or city like 'o%'
   or city like 'u%'
 order by city;
+
