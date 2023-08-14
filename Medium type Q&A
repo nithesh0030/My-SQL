@@ -81,7 +81,16 @@ SELECT first_name, last_name, 'Doctor'
 FROM doctors;
 
 
+11 Q. Show all allergies ordered by popularity. Remove NULL values from query.?
+A.
+SELECT allergies, COUNT(*) AS total_diagnosis 
+FROM patients
+WHERE allergies IS NOT NULL
+GROUP BY allergies
+ORDER BY total_diagnosis DESC;
 
+
+12 Q. 
 
 
 
