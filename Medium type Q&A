@@ -118,7 +118,12 @@ GROUP BY province_id
 HAVING sum_height >= 7000;
 
 
-
+15 Q. Show the difference between the largest weight and smallest weight for patients with the last name 'Maroni'.?
+A.
+SELECT
+  (MAX(weight) - MIN(weight)) AS weight_delta
+FROM patients
+WHERE last_name = 'Maroni';
 
 
 
