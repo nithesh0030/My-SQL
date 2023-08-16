@@ -156,6 +156,19 @@ WHERE
     AND len(patient_id) = 3);
 
 
+19 Q. Show first_name, last_name, and the total number of admissions attended for each doctor.
+      Every admission has been attended by a doctor.?
+A.
+SELECT first_name,last_name,
+     COUNT(*) AS admissions_total
+FROM admissions a
+      JOIN doctors ph ON ph.doctor_id = a.attending_doctor_id
+GROUP BY attending_doctor_id;
+
+
+20 Q. 
+
+
 
 
 
