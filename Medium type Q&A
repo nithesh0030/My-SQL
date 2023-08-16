@@ -134,7 +134,15 @@ GROUP BY day_number
 ORDER BY no_of_admissions DESC;
 
 
-17 Q. 
+17 Q. Show all columns for patient_id 542's most recent admission_date.?
+A.
+SELECT * FROM admissions
+WHERE patient_id = 542
+ORDER BY admission_date DESC
+LIMIT 1;
+
+
+18 Q. 
 
 
 
