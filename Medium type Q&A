@@ -178,7 +178,14 @@ JOIN doctors ph ON a.attending_doctor_id = ph.doctor_id
 GROUP BY doctor_id;
 
 
-
+21 Q. Display the total amount of patients for each province. Order by descending.?
+A.
+SELECT province_name,
+  COUNT(*) AS patient_count
+FROM patients pa
+  JOIN province_names pr ON pr.province_id = pa.province_id
+GROUP BY pr.province_id
+ORDER BY patient_count DESC;
 
 
 
