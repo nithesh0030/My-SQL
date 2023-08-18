@@ -200,4 +200,9 @@ FROM patients
 
 
 
-
+23 Q. display the number of duplicate patients based on their first_name and last_name.?
+A.
+SELECT first_name,last_name, COUNT(*) AS no_of_duplicate
+FROM patients
+GROUP BY first_name,last_name
+HAVING COUNT (*) >1;
