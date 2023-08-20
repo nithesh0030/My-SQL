@@ -227,8 +227,10 @@ FROM patients;
 25 Q. Show patient_id, first_name, last_name from patients whose does not have any records in the admissions table. 
       (Their patient_id does not exist in any admissions.patient_id rows.)?
 A.
-select patient_id,first_name,last_name
-from patients
-where patient_id not in(select distinct patient_id from admissions);
+SELECT patient_id,first_name,last_name
+FROM patients
+WHERE patient_id NOT IN(SELECT DISTINCT patient_id FROM admissions);
+
+
 
 
