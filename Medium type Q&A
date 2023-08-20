@@ -231,6 +231,13 @@ SELECT patient_id,first_name,last_name
 FROM patients
 WHERE patient_id NOT IN(SELECT DISTINCT patient_id FROM admissions);
 
+OR
+
+SELECT patients.patient_id, first_name, last_name
+FROM patients
+WHERE patients.patient_id NOT IN (SELECT admissions.patient_id
+                                  FROM  admissions);
+
 
 
 
