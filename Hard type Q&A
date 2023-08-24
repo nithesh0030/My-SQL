@@ -8,3 +8,5 @@ SELECT
 FROM patients
 GROUP BY weight_group
 ORDER BY weight_group DESC;
+
+
