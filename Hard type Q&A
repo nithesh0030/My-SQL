@@ -72,3 +72,32 @@ JOIN province_names AS pr ON pa.province_id = pr.province_id
 GROUP BY pr.province_name
 HAVING
   COUNT( CASE WHEN gender = 'M' THEN 1 END) > COUNT( CASE WHEN gender = 'F' THEN 1 END);
+
+
+7 Q. We are looking for a specific patient. Pull all columns for the patient who matches the following criteria:
+     - First_name contains an 'r' after the first two letters. - Identifies their gender as 'F'
+     - Born in February, May, or Decembe.- Their weight would be between 60kg and 80kg
+     - Their patient_id is an odd number - They are from the city 'Kingston'
+A.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
