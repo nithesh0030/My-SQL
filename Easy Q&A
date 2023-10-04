@@ -1,3 +1,6 @@
+~~ HOSPITAL DATABASE ~~
+
+
 1 Q.Show first name, last name, and gender of patients whose gender is 'M' ?
 A.
 SELECT first_name, last_name,gender
@@ -123,3 +126,8 @@ where
 order by city;
 
 
+~~ NORTHWIND DATABASE ~~
+
+
+1 Q. Show the category_name and description from the categories table sorted by category_name.?
+A.
