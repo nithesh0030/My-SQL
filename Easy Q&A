@@ -148,3 +148,11 @@ A.
 SELECT order_date, shipped_date, customer_id, freight
 FROM orders
 WHERE order_date = '2018-02-26';
+
+
+4 Q. Show the employee_id, order_id, customer_id, required_date, shipped_date from all orders shipped later than the required date?
+A. 
+SELECT employee_id, order_id, customer_id, required_date, shipped_date
+FROM orders
+WHERE shipped_date > required_date;
+
